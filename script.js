@@ -8,18 +8,40 @@ const emailSent = document.querySelector('.email-sent');
 
 input.focus();
 
+const hasConsecutiveDots = function (username) {
+  for (const [i, char] of [...username].entries()) {
+    if (char === '.') {
+      if (username[i] === username[i + 1]) {
+        console.log(username[i]);
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+const countAtSignOcurrences = function (stringParam) {
+  count = 0;
+  for (const char of stringParam) {
+    if (char == '@') count++;
+  }
+  return count;
+};
+
 const stringVerification = function (stringParam) {
-  const indexOfa = stringParam.indexOf('@');
-  const indexOfDot = stringParam.indexOf('.');
-  const beforeAinput = stringParam.slice(0, indexOfa);
-  const betweenDotAndA = stringParam.slice(indexOfa, indexOfDot);
+  const atSignIndex = stringParam.indexOf('@');
+  const afterusername = stringParam.slice(atSignIndex);
+  const username = stringParam.slice(0, atSignIndex);
+  const firstLetter = stringParam[0];
 
   if (
+    countAtSignOcurrences(stringParam) === 1 &&
+    !hasConsecutiveDots(username) &&
     stringParam.endsWith('.com') &&
-    stringParam.includes('@') &&
-    betweenDotAndA.length > 1 &&
-    beforeAinput.length >= 1 &&
-    !stringParam.includes(' ')
+    !stringParam.includes(' ') &&
+    afterusername.length > 5 &&
+    username.length > 0 &&
+    firstLetter !== '.'
   ) {
     return true;
   } else {
@@ -39,7 +61,7 @@ const resetEmail = function () {
 };
 
 subscribeButton.addEventListener('click', () => {
-  const string = input.value.trim();
+  const string = input.value.trim().toLowerCase();
 
   if (stringVerification(string)) {
     console.log(string);
