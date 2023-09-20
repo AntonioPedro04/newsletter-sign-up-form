@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <main class="submission-form">
+      <section class="submission-form-information">
+        <h1>Stay Updated!</h1>
+        <p>Join 60,000 product managers receiving monthly updates on:</p>
+        <ul>
+          <li>
+            <img src="assets/images/icon-success.svg" alt="" />Product discovery
+            and building what matters
+          </li>
+          <li>
+            <img src="assets/images/icon-success.svg" alt="" />Measuring to
+            ensure updates are a success
+          </li>
+          <li>
+            <img src="assets/images/icon-success.svg" alt="" />And much more!
+          </li>
+        </ul>
+        <div class="email">
+          <div class="email-header">
+            <p>Email address</p>
+            <p class="invalid-email-warning hidden">Valid email required</p>
+          </div>
+          <input type="text" placeholder="email@company.com" />
+        </div>
+        <button class="subscribe">Subscribe to monthly newsletter</button>
+      </section>
+      <aside></aside>
+    </main>
+
+    <main class="success-state hidden">
+      <section class="success-state-information">
+        <img
+          src="assets/images/icon-success.svg"
+          alt=""
+          class="success-state-icon"
+        />
+        <h1>Thanks for subscribing!</h1>
+        <p class="success-state-description">
+          A confirmation email has been sent to
+          <span class="email-sent"></span>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button class="dismiss-button">Dismiss message</button>
+      </section>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/7b8735d0be.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
