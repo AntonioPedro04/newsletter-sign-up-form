@@ -29,7 +29,7 @@ const countAtSignOcurrences = function (stringParam) {
 
 const stringVerification = function (stringParam) {
   const atSignIndex = stringParam.indexOf('@');
-  const afterusername = stringParam.slice(atSignIndex);
+  const afterUsername = stringParam.slice(atSignIndex);
   const username = stringParam.slice(0, atSignIndex);
   const firstLetter = stringParam[0];
 
@@ -38,7 +38,7 @@ const stringVerification = function (stringParam) {
     !hasConsecutiveDots(username) &&
     stringParam.endsWith('.com') &&
     !stringParam.includes(' ') &&
-    afterusername.length > 5 &&
+    afterUsername.length > 5 &&
     username.length > 0 &&
     firstLetter !== '.'
   ) {

@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [URL here](https://antoniopedro04.github.io/newsletter-sign-up-form/)
 
 ## My process
 
@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-It was a super fun experience making this project. It was the first time in a real project I used string methods and destructuring concepts to make the string verification work as a whole.
+It was a super fun experience making this project. It was the first time in a real project I used string methods and destructuring concepts to make the string verification work as a whole. Right below it can be seen one step of the verification that was necessary to be done.
 
 ```js
 const hasConsecutiveDots = function (username) {
