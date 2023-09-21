@@ -12,7 +12,6 @@ const hasConsecutiveDots = function (username) {
   for (const [i, char] of [...username].entries()) {
     if (char === '.') {
       if (username[i] === username[i + 1]) {
-        console.log(username[i]);
         return true;
       }
     }
@@ -64,7 +63,6 @@ subscribeButton.addEventListener('click', () => {
   const string = input.value.trim().toLowerCase();
 
   if (stringVerification(string)) {
-    console.log(string);
     submissionForm.classList.add('hidden');
     successState.classList.remove('hidden');
     emailSent.innerHTML = string;
