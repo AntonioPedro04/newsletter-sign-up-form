@@ -70,6 +70,21 @@ subscribeButton.addEventListener('click', () => {
     showWarning();
   }
 });
+
+input.addEventListener('keypress', function (event) {
+  if (event.key == 'Enter') {
+    const string = input.value.trim().toLowerCase();
+
+    if (stringVerification(string)) {
+      submissionForm.classList.add('hidden');
+      successState.classList.remove('hidden');
+      emailSent.innerHTML = string;
+    } else {
+      showWarning();
+    }
+  }
+});
+
 dismissButton.addEventListener('click', () => {
   submissionForm.classList.remove('hidden');
   successState.classList.add('hidden');
